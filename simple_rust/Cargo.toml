@@ -1,20 +1,8 @@
 [package]
-name = "rust_learning"
+name = "simple_rust"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[workspace]
-members = [
-    "simple_rust",
-    "simple_async",
-    "rust_async",
-]
-
 [dependencies]
-
-
-
-[lib]
-crate-type = ["lib"]
