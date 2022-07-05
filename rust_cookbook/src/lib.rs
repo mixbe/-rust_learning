@@ -11,4 +11,10 @@ mod tests {
         let result = 2 + 2;
         assert_eq!(result, 4);
     }
+
+    #[test]
+    fn test_main(){
+        let mut s = String::from("foo");
+        println!("{}", s)
+    }
 }
