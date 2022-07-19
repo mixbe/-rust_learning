@@ -2,6 +2,8 @@ pub mod compression;
 pub mod algorithms;
 pub mod command_line;
 pub mod concurrency;
+pub mod cryptography;
+pub mod date_and_time;
 
 
 #[cfg(test)]
