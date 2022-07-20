@@ -474,6 +474,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "rust-linklist"
+version = "0.1.0"
+
+[[package]]
 name = "rust_async"
 version = "0.1.0"
 

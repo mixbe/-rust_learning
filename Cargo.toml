@@ -8,5 +8,6 @@ members = [
     "rust_cookbook",
     "training_code",
     "minigrep",
-    "data-structure-algorithms"
+    "data-structure-algorithms",
+    "rust-linklist"
 ]

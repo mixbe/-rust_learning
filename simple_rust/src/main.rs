@@ -634,22 +634,134 @@ use std::cell::RefCell;
 //     }
 // }
 
-fn main() {
-    let a = Box::new(5);
-    println!("{}", a);
+// fn main() {
+//     let a = Box::new(5);
+//     println!("{}", a);
+//
+//     let b = RefCell::new(5);
+//     println!("b = {:?}", b.borrow());
+//     {
+//         *b.borrow_mut() = 100;
+//         println!("b = {:?}", b.borrow());
+//     }
+//     println!("b = {:?}", b.borrow());
+//
+//     let d = RefCell::new(vec![1, 2, 3]);
+//     {
+//         d.borrow_mut().push(10);
+//         println!("d = {:?}", d.borrow());
+//     }
+//     println!("d = {:?}", d.borrow());
+// }
 
-    let b = RefCell::new(5);
-    println!("b = {:?}", b.borrow());
-    {
-        *b.borrow_mut() = 100;
-        println!("b = {:?}", b.borrow());
-    }
-    println!("b = {:?}", b.borrow());
 
-    let d = RefCell::new(vec![1, 2, 3]);
-    {
-        d.borrow_mut().push(10);
-        println!("d = {:?}", d.borrow());
-    }
-    println!("d = {:?}", d.borrow());
+// pub struct AveragedCollection {
+//     list: Vec<i32>,
+//     average: f64,
+// }
+//
+//
+// impl AveragedCollection {
+//     pub fn new() -> Self {
+//         Self { list: vec![], average: 0f64 }
+//     }
+//
+//     pub fn add(&mut self, value: i32) {
+//         self.list.push(value);
+//         self.update_average()
+//     }
+//
+//
+//     pub fn remove(&mut self) -> Option<i32> {
+//         let result = self.list.pop();
+//         match result {
+//             None => None,
+//             Some(value) => {
+//                 self.update_average();
+//                 Some(value)
+//             }
+//         }
+//     }
+//
+//     pub fn average(&self) -> f64 {
+//         self.average
+//     }
+//
+//
+//     fn update_average(&mut self) {
+//         let total: i32 = self.list.iter().sum();
+//         self.average = total as f64 / self.list.len() as f64;
+//     }
+// }
+//
+// fn main() {
+//     let mut av = AveragedCollection::new();
+//     av.add(1);
+//     println!("{}", av.average());
+//     av.add(2);
+//     println!("{}", av.average());
+//     av.add(3);
+//     println!("{}", av.average());
+//     av.remove();
+//     println!("{}", av.average());
+// }
+
+
+pub trait Draw {
+    fn draw(&self);
 }
+
+// 使用动态数组
+pub struct Screen {
+    pub componnets: Vec<Box<dyn Draw>>,
+}
+
+impl Screen {
+    pub fn run(&self) {
+        for component in self.componnets.iter() {
+            component.draw();
+        }
+    }
+}
+
+// pub struct Screen<T: Draw> {
+//     pub componnets: Vec<T>,
+// }
+//
+// // 使用泛型参数 & trait 约束
+// impl<T> Screen<T>
+//     where T: Draw {
+//     pub fn run(&self) {
+//         for component in self.componnets.iter() {
+//             component.draw();
+//         }
+//     }
+// }
+
+
+pub struct Button {
+    pub width: u32,
+    pub height: u32,
+    pub label: String,
+}
+
+impl Draw for Button {
+    fn draw(&self) {
+        todo!()
+    }
+}
+
+struct SelectBox {
+    width: u32,
+    heigh: u32,
+    options: Vec<String>,
+}
+
+impl Draw for SelectBox {
+    fn draw(&self) {
+        todo!()
+    }
+}
+
+
+fn main() {}
