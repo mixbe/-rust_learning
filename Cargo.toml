@@ -2,12 +2,12 @@
 
 [workspace]
 members = [
-    "simple_rust",
-    "simple_async",
     "rust_async",
     "rust_cookbook",
-    "training_code",
-    "minigrep",
-    "data-structure-algorithms",
-    "rust-linklist"
+    "rust-linklist",
+    "rust_course", # rust圣经 https://course.rs/about-book.html
+    "rust_language", # https://doc.rust-lang.org/book/title-page.html
+    "rust_quiz",     # https://github.com/dtolnay/rust-quiz
+    "rust_code_challenge", #
+    "web2image"
 ]

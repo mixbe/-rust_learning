@@ -60,20 +60,20 @@ impl BoxedLinkedList {
             }
         }
     }
-    pub fn pop_back(&mut self) -> Option<i32> {
-        match self.head.as_mut() {
-            None => None,
-            Some(mut curr) => {
-                while curr.next.is_some() && curr.next.as_ref().unwrap().next.is_some() {
-                    curr = curr.next.as_mut().unwrap();
-                }
-                match curr.next {
-                    Some(_) => Some(curr.next.take().unwrap().value),
-                    None => Some(self.head.take().unwrap().value)
-                }
-            }
-        }
-    }
+    // pub fn pop_back(&mut self) -> Option<i32> {
+    //     match self.head.as_mut() {
+    //         None => None,
+    //         Some(mut curr) => {
+    //             while curr.next.is_some() && curr.next.as_ref().unwrap().next.is_some() {
+    //                 curr = curr.next.as_mut().unwrap();
+    //             }
+    //             match curr.next {
+    //                 Some(_) => Some(curr.next.take().unwrap().value),
+    //                 None => Some(self.head.take().unwrap().value)
+    //             }
+    //         }
+    //     }
+    // }
 
     // 从小到大的顺序插入
     fn insert(&mut self, value: i32) {
