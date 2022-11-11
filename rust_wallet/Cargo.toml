@@ -1,0 +1,14 @@
+[package]
+name = "rust_wallet"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ethers = "0.14.0"
+#ethers-core = "1.0.0"
+#ethers-signers = "1.0.0"
+rand = "0.8.5"
+anyhow = "1.0"
+tokio = { version = "1.21.2", features = ["full"] }
