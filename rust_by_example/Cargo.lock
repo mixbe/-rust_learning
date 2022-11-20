@@ -3,9 +3,5 @@
 version = 3
 
 [[package]]
-name = "concepts"
-version = "0.1.0"
-
-[[package]]
-name = "stack_heap"
+name = "rust_example"
 version = "0.1.0"

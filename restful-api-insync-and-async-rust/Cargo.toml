@@ -1,5 +1,5 @@
 [package]
-name = "concepts"
+name = "restful-api-insync-and-async-rust"
 version = "0.1.0"
 edition = "2021"
 
